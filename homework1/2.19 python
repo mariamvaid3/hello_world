@@ -1,0 +1,24 @@
+# Mariam Vaid
+
+#1477614
+
+lemon_juice_cups = float(input('Enter amount of lemon juice (in cups):\n'))
+water = float(input("Enter amount of water (in cups):\n"))
+agave_juice = float(input("Enter amount of agave nectar (in cups):\n"))
+serving = float(input("How many servings does this make?\n"))
+
+print("\nLemonade ingredients - yields {:.2f} servings".format(serving))
+print("{:.2f} cup(s) lemon juice".format(lemon_juice_cups))
+print("{:.2f} cup(s) water".format(water))
+print("{:.2f} cup(s) agave nectar".format(agave_juice))
+
+myservings = float(input("\nHow many servings would you like to make?\n"))
+print("\nLemonade ingredients - yields {:.2f} servings".format(myservings))
+print("{:.2f} cup(s) lemon juice".format(lemon_juice_cups * myservings / serving))
+print("{:.2f} cup(s) water".format(water * myservings / serving))
+print("{:.2f} cup(s) agave nectar".format(agave_juice * myservings / serving))
+
+print("\nLemonade ingredients - yields {:.2f} servings".format(myservings))
+print("{:.2f} gallon(s) lemon juice".format(lemon_juice_cups * myservings / serving/16))
+print("{:.2f} gallon(s) water".format(water * myservings / serving/16))
+print("{:.2f} gallon(s) agave nectar".format(agave_juice * myservings / serving/16))
