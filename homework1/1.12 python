@@ -1,0 +1,7 @@
+#Mariam Vaid
+#1477614
+
+userNum = int(input())
+userNumSquared = userNum * userNum  
+
+print(userNumSquared, end='\n')  
