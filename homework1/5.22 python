@@ -1,0 +1,43 @@
+# Mariam Vaid
+#1477614
+
+print("Davy's auto shop services")
+
+print('Oil change -- $35\n'
+'Tire rotation -- $19\n'
+'Car wash -- $7\n'
+'Car wax -- $12\n')
+
+oil = 35
+tire = 19
+wash = 7
+wax = 12
+
+menu1 = (input('Select first service:\n'))
+menu2 = (input('Select second service:\n\n'))
+
+print("Davy's auto shop invoice\n")
+if menu1 == 'Oil change':
+    print('Service 1: Oil change, $35')
+elif menu1 == 'Tire rotation':
+    print('Service 1: Tire rotation, $19')
+elif menu1 == 'Car wash':
+    print('Service 1: Car wash, $7')
+elif menu1 == 'Car wax':
+    print('Service 1: Car wax, $12')
+else:
+    print('Service 1: No service')
+
+if menu2 == 'Oil change':
+    print('Service 2: Oil change, $35\n')
+elif menu2 == 'Tire rotation':
+    print('Service 2: Tire rotation, $19\n')
+elif menu2 == 'Car wash':
+    print('Service 2: Car wash, $7\n')
+elif menu2 == 'Car wax':
+    print('Service 2: Car wax, $12\n')
+else:
+    print('Service 2: No service\n')
+
+total = menu1 + menu2
+print('Total:', total)
