@@ -1,0 +1,12 @@
+# Mariam Vaid
+#1477614
+
+user_num = int(input('Enter integer:\n'))
+print('You entered:', user_num)
+print(user_num, 'squared is', (user_num * user_num))
+print('And', user_num, 'cubed is', (user_num * user_num * user_num), '!!')
+user_num2 = int(input('Enter another integer:\n'))
+total_user = user_num + user_num2
+multi_user = user_num * user_num2
+print(user_num, '+', user_num2, 'is', total_user)
+print(user_num, '*', user_num2, 'is', multi_user)
