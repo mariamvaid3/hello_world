@@ -1,0 +1,17 @@
+#Mariam Vaid
+#1477614
+
+
+import datetime
+
+with open('inputDates.txt') as datefile:
+    listing0 = datefile.read().splitlines()
+secondlisting = []
+for y in range(len(listing0)):
+    if (listing0[y].find("/") == -1):
+        secondlisting.append(listing0[y])
+print(secondlisting)
+par = open('parsedDates.txt', 'w')
+par.writelines(secondlisting)
+par.close()
+print((datetime.datetime.now()))
