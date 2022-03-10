@@ -1,0 +1,18 @@
+#Mariam Vaid
+#1477614
+
+
+import csv
+
+input1 = input()
+with open(input1) as duplicatefile:
+    x = csv.reader(duplicatefile)
+    dict = {} #using the dictionary helps remove the duplicates
+    for row in x:
+        for string in row: #the string will look in the list in the duplicatefile
+            if string in dict:
+                dict[string] += 1
+            else:
+                dict[string] = 1
+    for y in dict:
+        print(y , dict[y])
