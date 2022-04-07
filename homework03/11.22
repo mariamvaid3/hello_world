@@ -1,0 +1,12 @@
+#mariam vaid
+#1477614
+
+
+list = input()
+words = list.split()
+
+for x in range(len(words)):
+    words[x] = words[x].lower()
+
+for y in list.split():
+    print(y, words.count(y.lower()))
