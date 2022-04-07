@@ -1,0 +1,12 @@
+#mariam vaid
+#1477614
+
+
+integer = input()
+number = []
+for x in integer.split(' '):
+    if int(x) >= 0:
+        number.append(int(x))
+        number.sort()
+for x in number:
+    print(x,end=' ')
