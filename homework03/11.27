@@ -1,0 +1,65 @@
+#mariam vaid
+#1477614
+
+
+player1 = input("Enter player 1's jersey number:\n")
+player1rate = input("Enter player 1's rating:\n")
+
+player2 = input("\nEnter player 2's jersey number:\n")
+player2rate = input("Enter player 2's rating:\n")
+
+player3 = input("\nEnter player 3's jersey number:\n")
+player3rate = input("Enter player 3's rating:\n")
+
+player4 = input("\nEnter player 4's jersey number:\n")
+player4rate = input("Enter player 4's rating:\n")
+
+player5 = input("\nEnter player 5's jersey number:\n")
+player5rate = input("Enter player 5's rating:\n")
+
+print('\nROSTER')
+print("Jersey number:" , player1 +",", "Rating:", player1rate)
+print("Jersey number:" , player2 +",", "Rating:", player2rate)
+print("Jersey number:" , player3 +",", "Rating:", player3rate)
+print("Jersey number:" , player4 +",", "Rating:", player4rate)
+print("Jersey number:" , player5 +",", "Rating:", player5rate)
+
+
+def roster_menu(rost):
+    while True:
+        print('MENU')
+        print('a - Add player')
+        print('d - Remove player')
+        print('u - Update player rating')
+        print('r - Output players above a rating')
+        print('o - Output roster')
+        print('q - Quit')
+        print('Choose an option:')
+        option = input()
+
+        if option == "a":
+            print("\nEnter a new player's jersey number:\n")
+            print("Enter the player's rating:\n")
+        elif option == "d":
+            print('Enter a jersey number:')
+            jerseynumber = input()
+            rost.remove_items(jerseynumber)
+        elif option == "o":
+            print('\nROSTER')
+            print("Jersey number:", player1 + ",", "Rating:", player1rate)
+            print("Jersey number:", player2 + ",", "Rating:", player2rate)
+            print("Jersey number:", player3 + ",", "Rating:", player3rate)
+            print("Jersey number:", player4 + ",", "Rating:", player4rate)
+            print("Jersey number:", player5 + ",", "Rating:", player5rate)
+        elif option == "u":
+            print('Enter a jersey number:')
+            print("Enter a new rating for player:")
+            updaterate = input()
+            rost.update_items(updaterate)
+        elif option == "q":
+            break
+
+
+
+
+
