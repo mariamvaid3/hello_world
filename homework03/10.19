@@ -1,0 +1,86 @@
+#mariam vaid
+#1477614
+
+
+class ItemToPurchase:
+    def __init__(self):
+        self.item_name = "None"
+        self.item_price = 0
+        self.item_quantity = 0
+        self.item_description = "None"
+
+    def print_item_description(self):
+        print((self.item_name) + ':', (self.item_description) + ',', (self.item_quantity), 'oz.')
+
+class ShoppingCart:
+    def __init__(self, customer_name = 'None', current_date = 'Jan 1st, 2016'):
+        self.customer_name = customer_name
+        self.current_date = current_date
+        self.cart_items = []
+
+    def add_item(self, x):
+        self.cart_items.append(x)
+
+    def remove_items(self, w):
+        self.cart_items.remove(w)
+        if self.cart_items.remove is None:
+            print('Item not found in cart. Nothing removed.')
+
+    def modify_item(self, updateitem):
+        modifying = None
+        for x in self.cart_items:
+            if x.item_name == updateitem.item_name:
+                modifying = x
+        if modifying == None:
+            print('Item not found in cart. Nothing modified.')
+    def get_num_items_in_cart(self):
+        all_quantity = 0
+        for y in self.cart_items:
+            all_quantity += y.item_quantity
+        return all_quantity
+    def get_cost_of_cart(self):
+        total_cost = 0
+        for e in self.cart_items:
+            total_cost += e.item_price
+    def print_total(self):
+        total_amount = None
+        if p in self.cart_items:
+            total_amount += p.cart_items
+        else:
+            print('SHOPPING CART IS EMPTY')
+
+    def print_menu(ShoppingCart):
+        while True:
+            print('MENU')
+            print('a - Add item to cart')
+            print('r - Remove item from cart')
+            print('c - Change item quantity')
+            print('i - Output items descriptions')
+            print('o - Output shopping cart')
+            print('q - Quit')
+            print('Choose an option:')
+            option = input()
+
+            while option == "a" and option == "r" and option == "c":
+                print("Choose an option:")
+                option = input()
+            if option == "o":
+                print('OUTPUT SHOPPING CART')
+                shoppingcart.print_total()
+            elif option == "r":
+                print('REMOVE ITEM FROM CART')
+                print("Enter name of item to remove:")
+                name_item = input()
+                shoppingcart.remove_items(name_item)
+            elif option == "i":
+                print('OUTPUT ITEM DESCRIPTION')
+                shoppingcart.print_description()
+            elif option == "q":
+                break
+
+
+
+
+
+
+
