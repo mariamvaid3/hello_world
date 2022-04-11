@@ -1,0 +1,92 @@
+#Mariam Vaid
+#1477614
+
+import csv
+import operator
+
+mylist = []
+#part a
+with open('/Users/mariamvaid/Desktop/final/GPAList.csv', 'r') as file2:
+    myfile = csv.reader(file2)
+with open('/Users/mariamvaid/Desktop/final/GraduationDatesList.csv', 'r') as file3:
+    myfile2 = csv.reader(file3)
+with open('/Users/mariamvaid/Desktop/final/StudentsMajorsList3.csv', 'r') as file:
+    myfile3 = csv.reader(file)
+    sort = sorted(myfile3, key=operator.itemgetter(1))
+    for row in sort:
+        mylist.append(row)
+
+
+    #part a
+    print('\n''part a')
+    for x in range(len(mylist)):
+        print(str(x) + str(mylist[x]))
+
+#part b
+    mylist2 = []
+    with open('/Users/mariamvaid/Desktop/final/StudentsMajorsList3.csv', 'r') as file2:
+        myfile5 = csv.reader(file2)
+        sort = sorted(myfile5, key=operator.itemgetter(3))
+        for row in sort:
+            mylist2.append(row)
+
+
+        # part b
+        print('\n''part b')
+        major = 0
+        for x in range(len(mylist2[major])):
+            print(str(mylist2[x]))
+
+        print('\n''part c')
+#part c
+class GPA:
+    def __init__(self, gpa=6, name=3, id=0):
+        self.name = name
+        self.id = id
+        self.gpa = gpa
+    mylist25 = []
+    with open('/Users/mariamvaid/Desktop/final/GPAList.csv', 'r') as file6:
+        myfile6 = csv.reader(file6)
+        sort = sorted(myfile6, key=lambda column:column[1])
+        for row in sort:
+            mylist25.append(row)
+    with open('/Users/mariamvaid/Desktop/final/StudentsMajorsList3.csv', 'r') as file7:
+        myfile7 = csv.reader(file7)
+        sort = sorted(myfile7, key=lambda column: column[0])
+        for row in sort:
+            mylist25.append(row)
+
+        # part c
+        for x in range(len(mylist25)):
+            print(str(mylist25[x]))
+
+# part d
+    print('\n''part d')
+    mylist10 = []
+    with open('/Users/mariamvaid/Desktop/final/DisciplinedStudents.csv', 'r') as file10:
+        myfile10 = csv.reader(file10)
+        sort = sorted(myfile10, key=lambda column: column[0])
+        for row in sort:
+            mylist10.append(row)
+
+    with open('/Users/mariamvaid/Desktop/final/GraduationDatesList.csv', 'r') as file11:
+        myfile11 = csv.reader(file11)
+        sort = sorted(myfile11, key=lambda column: column[1])
+        for row in sort:
+            mylist10.append(row)
+
+        with open('/Users/mariamvaid/Desktop/final/StudentsMajorsList3.csv', 'r') as file12:
+            myfile12 = csv.reader(file12)
+            sort = sorted(myfile12, key=lambda column: column[5], reverse=True)
+            for row in sort:
+                mylist10.append(row)
+
+        for x in range(len(mylist10)):
+            print(str(mylist10[x]))
+
+
+
+
+
+
+
