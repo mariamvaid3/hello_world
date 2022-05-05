@@ -1,0 +1,18 @@
+#Mariam Vaid
+#1477614
+
+
+def selection_sort_descend_trace(numbers):
+    for x in range(len(numbers) - 1):
+        cougar = x
+        for y in range(x + 1, len(numbers)):
+            if numbers[y] > numbers[cougar]:
+                cougar = y
+        numbers[x], numbers[cougar] = numbers[cougar], numbers[x]
+        print(' '.join([str(m) for m in numbers]))
+    return numbers
+
+
+if __name__ == '__main__':
+    listofnumber = [int(value) for value in input("").split(" ")]
+    selection_sort_descend_trace(listofnumber)
