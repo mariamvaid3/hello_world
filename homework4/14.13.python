@@ -1,0 +1,44 @@
+#1477614
+#Mariam Vaid
+
+
+# Global variable
+num_calls = 0
+
+def partition(user_ids, i, k):
+    global num_calls
+    beau = (i - 1)
+    random = user_ids[k]
+    for cinder in range(i, k):
+        if user_ids[cinder] <= random:
+            beau = beau + 1
+            user_ids[beau], user_ids[cinder] = user_ids[cinder], user_ids[beau]
+    user_ids[beau + 1], user_ids[k] = user_ids[k], user_ids[beau + 1]
+    return (beau + 1)
+
+
+def quicksort(user_ids, i, k):
+    global num_calls
+    num_calls = num_calls + 1
+    if i < k:
+        sort = partition(user_ids, i, k)
+        quicksort(user_ids, i, sort - 1)
+        quicksort(user_ids, sort + 1, k)
+
+
+if __name__ == "__main__":
+    user_ids = []
+    user_id = input()
+    while user_id != "-1":
+        user_ids.append(user_id)
+        user_id = input()
+
+    # Initial call to quicksort
+    quicksort(user_ids, 0, len(user_ids) - 1)
+
+    # Print number of calls to quicksort
+    print(num_calls)
+
+    # Print sorted user ids
+    for user_id in user_ids:
+        print(user_id)
